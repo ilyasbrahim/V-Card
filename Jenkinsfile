@@ -39,18 +39,7 @@ pipeline {
                 // Add any test commands here
             }
         }
-        stage('Push') {
-            steps {
-                script {
-                    withEnv(["PATH+DOCKER=${env.DOCKER_PATH}"]) {
-                        docker.withRegistry('', 'dockerhub-credentials') {
-                            sh "${DOCKER_PATH} login -u gitlen -p ${DOCKERHUB_CREDENTIALS_PSW} https://index.docker.io/v1/"
-                            sh "${DOCKER_PATH} push gitlen/v-card:latest"
-                        }
-                    }
-                }
-            }
-        }
+        
         stage('Deploy') {
             steps {
                 script {
