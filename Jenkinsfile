@@ -4,6 +4,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         GITHUB_CREDENTIALS = credentials('github-credentials')
         VERCEL_TOKEN = credentials('vercel-token')
+        DOCKER_PATH = '/usr/local/bin/docker'
     }
     stages {
         stage('Checkout') {
@@ -14,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build("gitlen/v-card")
+                    dockerImage = sh(script: "${DOCKER_PATH} build -t gitlen/v-card .", returnStdout: true).trim()
                 }
             }
         }
@@ -28,7 +29,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('', 'dockerhub-credentials') {
-                        dockerImage.push("latest")
+                        sh "${DOCKER_PATH} push gitlen/v-card:latest"
                     }
                 }
             }
