@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profile-cartoon.png" alt="Ilyas Brahim" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Ilyas Brahim">Ilyas Brahim</h1>
+
+          <p class="title">DevOps Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:ilyas.brahim19@gmail.com" class="contact-link">ilyas.brahim19@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+46 73 581 95 86</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">December 20, 1999</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Stockholm, Sweden</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/ilyas-brahim-00b56a1b4" class="social-link" target="_blank">
+              <ion-icon name="logo-LinkedIn"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/ilyasbrahim" class="social-link" target="_blank">
+              <ion-icon name="logo-Github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Energetic and dedicated DevOps Engineer with a good understanding of DevOps principles and tools.
+            Experienced in System Development, agile project methodologies, DevOps Engineering, cloud technologies, and
+            automation. I have an ability for quickly learning new concepts and techniques, allowing me to adapt in
+            diverse environments.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/Devops.png
+                " alt="devops icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Devops Engineer</h4>
+
+                <p class="service-item-text">
+                  Bridging dev and ops for faster software delivery and enhanced business agility.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/cloud.png" alt="Cloud Icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cloud Engineer</h4>
+
+                <p class="service-item-text">
+                  I focus on optimizing infrastructure and driving innovation with cloud technologies.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/platform.png" alt="Platform icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">PLatform Engineer</h4>
+
+                <p class="service-item-text">
+                  I specialize in designing and managing scalable and reliable infrastructure to support applications
+                  and services.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/stars.png" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Site reliability Engineer</h4>
+
+                <p class="service-item-text">
+                  Ensuring the reliability and performance of software systems through automation and proactive
+                  monitoring.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+
+          - Skills
+        -->
+
+        <section class="skills">
+
+          <h3 class="h3 skills-title">Skills</h3>
+
+          <ul class="skills-list has-scrollbar">
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/python.png" alt="Python">
+                <span class="skill-name">Python</span> <!-- Skill name for hover display -->
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/ansible.png" alt="skills logo">
+                <span class="skill-name">Ansible</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/bash.svg" alt="skills logo">
+                <span class="skill-name">Bash</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/kubernetes.svg" alt="skills logo">
+                <span class="skill-name">Kubernetes</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/docker.svg" alt="skills logo">
+                <span class="skill-name">Docker</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/jenkins.svg" alt="skills logo">
+                <span class="skill-name">Jenkins</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/terraform.png" alt="skills logo">
+                <span class="skill-name">Terraform</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/Azure.svg" alt="skills logo">
+                <span class="skill-name">Azure</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/git.png" alt="skills logo">
+                <span class="skill-name">Git</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/golang.png" alt="skills logo">
+                <span class="skill-name">GoLang</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/sql.png" alt="skills logo">
+                <span class="skill-name">SQL</span>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a>
+                <img src="./assets/images/prometheus.svg" alt="skills logo">
+                <span class="skill-name">Prometheus</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Chas Academy | DevOps Engineer
+              </h4>
+
+              <span>2022 — 2024</span>
+
+              <p class="timeline-text">
+                  <p>- Deep dive into DevOps concepts and methods</p>
+                  <p>- Agile working methods with a focus on Scrum and project management as a Scrum Master</p>
+                  <p>- Database development with SQL, SQLite, MySQL, MariaDB, and cloud-based storage services</p>
+                  <p>- Management of DevOps environments with Git, Gitflow, Jenkins, Kubernetes, and Docker</p>
+                  <p>- Cloud services like AWS and Azure for creation and deployment</p>
+                  <p>- Monitoring and management of systems with Zabbix, Prometheus and Grafana</p>
+                  <p>- Automation and configuration management with Ansible</p>
+                  <p>- Linux/Unix server administration and bash programming</p>
+                  <p>- Scripting and programming with Python, Golang, and Bash</p>
+                  <p>- Infrastructure as code with Kubernetes, Jenkins, and Terraform</p>
+                  <p>- Continuous Integration and Delivery</p>
+                  <p>- Test-driven development (TDD) and Behavior-Driven Development (BDD)</p>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Thoren Innovation School | Engineering Science</h4>
+
+              <span>2015 — 2018</span>
+
+              <p class="timeline-text">
+                  <p>- Programming 1</p>
+                  <p>- Technology 1</p>
+                  <p>- Web Development 1</p>
+                  <p>- Web Server Programming 1</p>
+                  <p>- Computer and Network Technology</p>
+                  <p>- Mathematics 1c, 2c, 3c, 4 and 5</p>
+                  <p>- Construction 1</p>
+                  <p>- Physics 1a</p>
+                  <p>- Chemistry 1</p>
+                  <p>- English 5, 6 and 7</p>
+                  <p>- Swedish 1, 2 and 3</p>
+                  <p>- Social Studies 1b</p>
+                  <p>- History 1a1</p>
+                  <p>- Religious Studies 1</p>
+                  <p>- Physical Education and Health 1</p>
+
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Devops Engineer | Consultera</h4>
+
+              <span>2023 — Present</span>
+
+              <p class="timeline-text">
+                  <p>- Responsible for DevOps on Enjoyp.com, Rapedido.es, and Palestinedrinks.com projects</p>
+                  <p>- Directed cloud infrastructure design and implementation</p>
+                  <p>- Implemented Docker and Kubernetes for scalability and resource optimization</p>
+                  <p>- Enhanced distribution and management of containerized applications</p>
+                  <p>- Optimized CI/CD pipelines using Azure DevOps</p>
+                  <p>- Managed Virtual Machines hosting websites with MySQL, Nginx, and Elasticsearch</p>
+                  <p>- Implemented security measures and system monitoring for high availability</p>
+                  <p>- Worked agilely to strengthen product quality and team dynamics</p>
+                  <p>- Utilized Git for version control, enabling efficient workflows and collaboration</p>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sales Manager | Bilselect AB</h4>
+
+              <span>2020 — 2022</span>
+
+              <p class="timeline-text">
+                <p>- Managed sales and purchases of various types of vehicles, including cars, transportation vehicles, and heavy trucks</p>
+                <p>- Managed negotiations and international exports</p>
+                <p>- Performed administrative tasks such as invoicing, financing, advertising, and inventory management</p>
+                <p>- Carried out practical tasks such as inspection, service planning, home delivery, painting, and quality control</p>
+                <p>- Managed a team of employees involved in sales, purchases, administrative tasks, and practical operations</p>
+                <p>- Maintained positive relationships with customers and provided exceptional customer service</p>
+                <p>- </p>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Franchise Owner | Steamrex By OKQ8</h4>
+
+              <span>2019 — 2020</span>
+
+              <p class="timeline-text">
+                <p>- Operated a mobile car washing and detailing business</p>
+                <p>- Utilized eco-friendly products and techniques</p>
+                <p>- Conducted marketing, bookkeeping, invoicing, and sales activities</p>
+                <p>- Managed scheduling and appointments for efficient service delivery</p>
+                <p>- Provided exceptional customer service to ensure satisfaction and loyalty</p>
+                <p>- Implemented quality control measures to maintain high standards of service</p>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="Database Developement">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/pet-mockup.png" alt="SQL" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">SQL Database</h3>
+
+                <p class="project-category">Database Developement</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud & devops">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/palestinedrinks.png" alt="palestinedrinks" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">PalestineDrinks.com</h3>
+
+                <p class="project-category">Cloud & DevOps</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud & devops">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/enjoyp-mockup.png" alt="enjoyp" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Enjoyp.com</h3>
+
+                <p class="project-category">Cloud & DevOps</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud & devops">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/rapedido-mockup.png" alt="rapedido" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Rapedido.es</h3>
+
+                <p class="project-category">Cloud & DevOps</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="python development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Bildemo.png" alt="bildemo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Bildemo</h3>
+
+                <p class="project-category">Python Developement</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portfolioweb.png" alt="portfolio Website" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Portfolio Website</h3>
+
+                <p class="project-category">Web development & deployment</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
