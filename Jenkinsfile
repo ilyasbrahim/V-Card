@@ -4,9 +4,23 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         GITHUB_CREDENTIALS = credentials('github-credentials')
         VERCEL_TOKEN = credentials('vercel-token')
-        DOCKER_PATH = '/usr/local/bin/docker'
+        DOCKER_PATH = '/usr/local/bin/docker' 
     }
     stages {
+        stage('Print Environment') {
+            steps {
+                script {
+                    sh 'echo $PATH'
+                }
+            }
+        }
+        stage('Test Docker') {
+            steps {
+                script {
+                    sh "${DOCKER_PATH} --version"
+                }
+            }
+        }
         stage('Checkout') {
             steps {
                 git credentialsId: 'github-credentials', url: 'https://github.com/ilyasbrahim/V-Card.git', branch: 'main'
@@ -28,8 +42,11 @@ pipeline {
         stage('Push') {
             steps {
                 script {
-                    docker.withRegistry('', 'dockerhub-credentials') {
-                        sh "${DOCKER_PATH} push gitlen/v-card:latest"
+                    withEnv(["PATH+DOCKER=${env.DOCKER_PATH}"]) {
+                        docker.withRegistry('', 'dockerhub-credentials') {
+                            sh "${DOCKER_PATH} login -u gitlen -p ${DOCKERHUB_CREDENTIALS_PSW} https://index.docker.io/v1/"
+                            sh "${DOCKER_PATH} push gitlen/v-card:latest"
+                        }
                     }
                 }
             }
