@@ -4,7 +4,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         GITHUB_CREDENTIALS = credentials('github-credentials')
         VERCEL_TOKEN = credentials('vercel-token')
-        DOCKER_PATH = '/usr/local/bin/docker' 
+        DOCKER_PATH = '/usr/local/bin/docker'  // Specify the Docker path
     }
     stages {
         stage('Print Environment') {
@@ -39,12 +39,13 @@ pipeline {
                 // Add any test commands here
             }
         }
-        
         stage('Deploy') {
             steps {
                 script {
-                    withEnv(["VERCEL_TOKEN=${env.VERCEL_TOKEN}"]) {
-                        sh 'vercel --prod --token $VERCEL_TOKEN'
+                    withCredentials([string(credentialsId: 'vercel-token', variable: 'VERCEL_TOKEN')]) {
+                        withEnv(["PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]) {
+                            sh 'vercel --prod --yes --token $VERCEL_TOKEN'
+                        }
                     }
                 }
             }
