@@ -35,10 +35,14 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Unit Test') {
             steps {
                 echo 'Running tests...'
-                // Add any test commands here
+                script {
+                    sh 'npm install'
+                    sh 'npm test'
+                }
+                
             }
         }
         stage('Deploy') {
